@@ -8,11 +8,16 @@
 Welcome to mor's documentation!
 ===============================
 
+TODO
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Documentation:
 
-   morpc
+   installing
+   modules
+
 
 Indices and tables
 ==================
