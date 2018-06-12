@@ -8,8 +8,8 @@ import scipy.sparse as sp
 def petsc2sp(A):
     """Creates scipy sparse matrix/numpy array from a PETSc matrix/vector.
     
-    :arg A: PETSc matrix/vector A
-    :returns: Scipy sparse matrix/numpy array
+    :arg A:  a :class:`petsc4py.Mat`/:class:`petsc4py.Vec`
+    :returns: a :class:`scipy.sparse.csr_matrix`/:class:`numpy.ndarray`
     """
     if A.Type == PETSc.Vec.Type:
         return A.array.reshape(1, A.local_size)
@@ -38,7 +38,7 @@ class MORProjector(object):
     def take_snapshot(self, u):
         """Store a snapshot
 
-        :arg u: a :class:`firedrake.Function`
+        :arg u: a :class:`firedrake.function.Function`
         """
         self.snaps.append(u.copy(deepcopy=True))
 
@@ -150,7 +150,7 @@ class MORProjector(object):
     def project_function(self, f, func_type='petsc'):
         """Project a function from full space to reduced space.
 
-        :param f: :class:`firedrake.Function`.
+        :param f: :class:`firedrake.function.Function`.
         :param func_type: Type of returned function.
         :return: Projected function.
         """
