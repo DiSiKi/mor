@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+mor/morpc.py
+mor/morprojector.py
+mor.egg-info/PKG-INFO
+mor.egg-info/SOURCES.txt
+mor.egg-info/dependency_links.txt
+mor.egg-info/top_level.txt
