@@ -17,6 +17,7 @@ TODO
 
    installing
    modules
+   generate_documentation
 
 
 Indices and tables
